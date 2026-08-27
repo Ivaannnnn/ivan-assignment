@@ -35,18 +35,25 @@ svg {
     margin: 0 auto 20px;
 }
 
-/* Flexbox container */
+/* Grid container */
 .container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Flexbox items */
+/* Grid items */
 .section {
     background-color: white;
     padding: 20px;
-    width: 400px;
+    border: 2px solid #1E88E5;
     border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Personal Information takes the full width */
+.section:first-child {
+    grid-column: span 2;
 }
