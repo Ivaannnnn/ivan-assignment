@@ -34,3 +34,19 @@ svg {
     display: block;
     margin: 0 auto 20px;
 }
+
+/* Flexbox container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Flexbox items */
+.section {
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+}
