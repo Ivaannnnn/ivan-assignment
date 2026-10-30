@@ -1,141 +1,283 @@
-<!DOCTYPE html>
 
-<!-- Root HTML document -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-    <!-- Character encoding -->
+    <!-- Basic information about the webpage -->
     <meta charset="UTF-8">
-
-    <!-- Responsive design for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Page description -->
-    <meta name="description" content="Curriculum Vitae of Ivan Firmansyah">
+    <!-- Website title shown in the browser tab -->
+    <title>My Curriculum Vitae</title>
 
-    <!-- Keywords for search engines -->
-    <meta name="keywords" content="CV, Data Science, HTML, Programming, Student">
+    <!-- Tailwind CSS Framework using Play CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Author information -->
-    <meta name="author" content="Ivan Firmansyah">
-
-    <!-- Browser title -->
-    <title>Ivan Firmansyah - Curriculum Vitae</title>
-
-    <!-- External CSS file -->
+    <!-- Connect the external CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-<!-- Body of the webpage -->
-<body>
-    <body>
+<body class="bg-gray-100 text-gray-800">
 
-    <!-- SVG Logo -->
-    <svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+    <!-- =====================================
+         1. HEADER SECTION
+         Contains the logo and main CV title
+    ====================================== -->
 
-        <!-- Outer Circle -->
-        <circle cx="90" cy="90" r="80"
-                fill="#1E88E5"
-                stroke="#0D47A1"
-                stroke-width="5"/>
+    <header class="header-section text-white text-center">
 
-        <!-- Laptop Screen -->
-        <rect x="45" y="55"
-              width="90"
-              height="55"
-              rx="6"
-              fill="white"
-              stroke="#0D47A1"
-              stroke-width="3"/>
+        <!-- SVG Logo -->
+        <svg width="120" height="120" viewBox="0 0 120 120"
+             xmlns="http://www.w3.org/2000/svg">
 
-        <!-- Laptop Base -->
-        <rect x="35" y="115"
-              width="110"
-              height="10"
-              rx="3"
-              fill="#0D47A1"/>
+            <!-- Blue circular background -->
+            <circle cx="60" cy="60" r="55" fill="#ffffff"/>
 
-        <!-- Data Chart -->
-        <rect x="60" y="90" width="10" height="15" fill="#42A5F5"/>
-        <rect x="78" y="80" width="10" height="25" fill="#1E88E5"/>
-        <rect x="96" y="70" width="10" height="35" fill="#1565C0"/>
-        <rect x="114" y="60" width="10" height="45" fill="#0D47A1"/>
+            <!-- Laptop screen -->
+            <rect x="30" y="30" width="60" height="40"
+                  rx="5" fill="#1252b2"/>
 
-        <!-- Initial -->
-        <text x="90"
-              y="45"
-              text-anchor="middle"
-              font-size="20"
-              font-family="Arial"
-              font-weight="bold"
-              fill="white">
-            Ivannn
-        </text>
+            <!-- Laptop screen content -->
+            <rect x="36" y="36" width="48" height="28"
+                  rx="2" fill="#dbeafe"/>
 
-    </svg>
+            <!-- Data chart bars -->
+            <rect x="42" y="52" width="6" height="8" fill="#0088ff"/>
+            <rect x="53" y="46" width="6" height="14" fill="#0088ff"/>
+            <rect x="64" y="40" width="6" height="20" fill="#0088ff"/>
 
-    <!-- Main heading -->
-    <h1>My Curriculum Vitae</h1>
+            <!-- Laptop keyboard base -->
+            <path d="M25 73 H95 L88 80 H32 Z" fill="#1252b2"/>
 
-    <!-- Grid Container -->
-<div class="container">
+            <!-- Logo name -->
+            <text x="60" y="98" font-size="13"
+                  text-anchor="middle" fill="#1252b2"
+                  font-weight="bold">
+                Ivannn
+            </text>
 
-    <!-- Personal Information Section -->
-    <div class="section">
-        <h2>Personal Information</h2>
+        </svg>
+
+        <!-- Main heading -->
+        <h1 class="text-3xl font-bold">
+            My Curriculum Vitae
+        </h1>
+
+        <!-- Short description -->
+        <p class="text-blue-100">
+            Data Science Student | Fatoni University
+        </p>
+
+    </header>
+
+
+    <!-- =====================================
+         2. MAIN CONTENT
+         Contains all CV information
+    ====================================== -->
+
+    <main class="max-w-4xl mx-auto space-y-6">
+
+
+        <!-- =====================================
+             3. PERSONAL INFORMATION
+        ====================================== -->
+
+        <section class="cv-section">
+
+            <h2 class="section-title text-xl font-bold">
+                Personal Information
+            </h2>
+
+            <p>
+                My name is <strong>Ivan Firmansyah</strong>.
+                I am a Data Science student at Fatoni University.
+                I am interested in data analysis, web development,
+                and programming.
+            </p>
+
+            <p>
+                I can communicate in Indonesian, English,
+                and basic Thai. I also have experience using
+                Python, HTML, CSS, JavaScript, PHP, and SQL.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             4. LANGUAGE SKILLS
+        ====================================== -->
+
+        <section class="cv-section">
+
+            <h2 class="section-title text-xl font-bold">
+                Languages
+            </h2>
+
+            <!-- Grid layout using Tailwind CSS -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                <div class="skill-item">
+                    Indonesian
+                </div>
+
+                <div class="skill-item">
+                    English
+                </div>
+
+                <div class="skill-item">
+                    Malay
+                </div>
+
+                <div class="skill-item">
+                    Basic Thai
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             5. PROGRAMMING LANGUAGES
+        ====================================== -->
+
+        <section class="cv-section">
+
+            <h2 class="section-title text-xl font-bold">
+                Programming Languages
+            </h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                <div class="skill-item">
+                    Python
+                </div>
+
+                <div class="skill-item">
+                    HTML
+                </div>
+
+                <div class="skill-item">
+                    CSS
+                </div>
+
+                <div class="skill-item">
+                    JavaScript
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             6. PROJECTS
+             Shows completed academic and
+             personal projects
+        ====================================== -->
+
+        <section class="cv-section">
+
+            <h2 class="section-title text-xl font-bold">
+                Projects
+            </h2>
+
+            <div class="space-y-4">
+
+                <div class="project-item">
+                    <h3 class="font-bold">
+                        TravelGo – Travel Package Booking System
+                    </h3>
+                    <p>
+                        A web-based system for browsing and
+                        booking travel packages.
+                    </p>
+                </div>
+
+                <div class="project-item">
+                    <h3 class="font-bold">
+                        Cinema Ticket Booking System
+                    </h3>
+                    <p>
+                        A website project for managing cinema
+                        ticket bookings.
+                    </p>
+                </div>
+
+                <div class="project-item">
+                    <h3 class="font-bold">
+                        Sales Dashboard using Tableau
+                    </h3>
+                    <p>
+                        A data visualization project for
+                        analyzing sales performance.
+                    </p>
+                </div>
+
+                <div class="project-item">
+                    <h3 class="font-bold">
+                        Big Data Stock Market Analysis
+                    </h3>
+                    <p>
+                        A project involving financial data
+                        collection and analysis.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             7. ACTIVITIES
+             Lists academic and technical activities
+        ====================================== -->
+
+        <section class="cv-section">
+
+            <h2 class="section-title text-xl font-bold">
+                Activities
+            </h2>
+
+            <ul class="list-disc">
+
+                <li>Website Development Projects</li>
+
+                <li>Data Visualization using Tableau</li>
+
+                <li>Research Methodology Project</li>
+
+                <li>University Data Science Assignments</li>
+
+            </ul>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================
+         8. FOOTER
+         Displays the copyright information
+    ====================================== -->
+
+    <footer class="footer-section max-w-4xl mx-auto mt-6">
 
         <p>
-            My name is <strong>Ivan Firmansyah</strong>. I am a Data Science student at Fatoni University. I am interested in data analysis, web development, and programming. I speak Indonesian, English, and basic Thai. I have experience using Python, HTML, CSS, JavaScript, PHP, and SQL. I enjoy learning new technologies and developing useful websites and data science projects.
+            &copy; 2026 Ivan Firmansyah.
+            All Rights Reserved.
         </p>
-    </div>
 
-    <!-- Languages Section -->
-    <div class="section">
-        <h2>Languages I Speak</h2>
+        <p>
+            My Curriculum Vitae | Data Science Student
+        </p>
 
-        <ul>
-            <li>Indonesian</li>
-            <li>English</li>
-            <li>Malay</li>
-            <li>Basic Thai</li>
-        </ul>
-    </div>
+    </footer>
 
-    <!-- Programming Languages Section -->
-    <div class="section">
-        <h2>Programming Languages I Have Used</h2>
 
-        <ul>
-            <li>Python</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </div>
-
-    <!-- Projects Section -->
-    <div class="section">
-        <h2>Projects</h2>
-
-        <ul>
-            <li>TravelGo – Travel Package Booking System</li>
-            <li>Cinema Ticket Booking System</li>
-            <li>Sales Dashboard using Tableau</li>
-            <li>Big Data Stock Market Analysis</li>
-        </ul>
-    </div>
-
-    <!-- Activities Section -->
-    <div class="section">
-        <h2>Activities</h2>
-
-        <ul>
-            <li>Website Development Projects</li>
-            <li>Data Visualization using Tableau</li>
-            <li>Research Methodology Project</li>
-            <li>University Data Science Assignments</li>
-        </ul>
-    </div>
-
-</div>
+</body>
+</html>

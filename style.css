@@ -1,59 +1,204 @@
-/* Style for the whole webpage */
+
+/* =========================================
+   1. GENERAL WEBSITE STYLE
+   Controls the overall appearance of the page
+========================================= */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    margin: 40px;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 40px 20px;
     color: #131313;
 }
 
-/* Main heading */
+
+/* =========================================
+   2. MAIN HEADING (H1)
+   Styles the main CV title
+========================================= */
+
 h1 {
-    color: #1252b2;
+    color: #ffffff;
     text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-/* Section headings */
+
+/* =========================================
+   3. SECTION HEADINGS (H2)
+   Styles headings such as Personal Information,
+   Languages, Programming Languages, etc.
+========================================= */
+
 h2 {
-    color: #0088ff;
-    border-bottom: 2px solid #1c2125;
-    padding-bottom: 5px;
+    color: #1252b2;
+    border-bottom: 2px solid #dbeafe;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-/* Paragraph styling */
+
+/* =========================================
+   4. PARAGRAPH STYLE
+   Controls the spacing between lines of text
+========================================= */
+
 p {
     line-height: 1.6;
 }
 
-/* List styling */
+
+/* =========================================
+   5. LIST STYLE
+   Controls the appearance of unordered lists
+========================================= */
+
 ul {
     line-height: 1.8;
+    padding-left: 20px;
 }
 
-/* SVG logo position */
+
+/* =========================================
+   6. SVG LOGO
+   Controls the position of the CV logo
+========================================= */
+
 svg {
     display: block;
     margin: 0 auto 20px;
 }
 
-/* Grid container */
-.container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+
+/* =========================================
+   7. CV CONTENT SECTIONS
+   Creates white cards around each CV section
+========================================= */
+
+.cv-section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
 }
 
-/* Grid items */
-.section {
-    background-color: white;
+/* Adds a small movement when hovering over a section */
+.cv-section:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   8. HEADER SECTION
+   Creates the blue gradient background
+   behind the logo and CV title
+========================================= */
+
+.header-section {
+    background: linear-gradient(135deg, #1252b2, #0088ff);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   9. SECTION TITLE CLASS
+   Styles the titles inside the CV cards
+========================================= */
+
+.section-title {
+    color: #1252b2;
+    border-bottom: 2px solid #dbeafe;
+    padding-bottom: 10px;
+}
+
+
+/* =========================================
+   10. SKILL ITEMS
+   Creates small blue cards for languages
+   and programming skills
+========================================= */
+
+.skill-item {
+    background-color: #eff6ff;
+    color: #1252b2;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Changes the skill card color when hovered */
+.skill-item:hover {
+    background-color: #1252b2;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   11. PROJECT ITEMS
+   Styles each project in the CV
+========================================= */
+
+.project-item {
+    background-color: #eff6ff;
+    border-left: 4px solid #1252b2;
+    padding: 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Adds a hover effect to project cards */
+.project-item:hover {
+    background-color: #dbeafe;
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   12. FOOTER SECTION
+   Styles the bottom part of the CV
+========================================= */
+
+.footer-section {
+    background-color: #1252b2;
+    color: #ffffff;
+    text-align: center;
     padding: 20px;
-    border: 2px solid #1E88E5;
-    border-radius: 10px;
-    box-sizing: border-box;
+    border-radius: 12px;
 }
 
-/* Personal Information takes the full width */
-.section:first-child {
-    grid-column: span 2;
+
+/* =========================================
+   13. RESPONSIVE DESIGN
+   Adjusts the CV layout for mobile screens
+========================================= */
+
+@media (max-width: 640px) {
+
+    /* Reduces the page spacing on mobile */
+    body {
+        padding: 15px;
+    }
+
+    /* Makes the main title smaller */
+    h1 {
+        font-size: 28px;
+    }
+
+    /* Makes section headings smaller */
+    h2 {
+        font-size: 20px;
+    }
+
+    /* Reduces the padding inside CV cards */
+    .cv-section {
+        padding: 18px;
+    }
 }
